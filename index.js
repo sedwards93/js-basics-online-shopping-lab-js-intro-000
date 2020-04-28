@@ -39,13 +39,17 @@ function total() {
   return count
 }
 
-function removeFromCart(itemName) {
-  var newcart = cart;
-  for (let i = 0; i < cart.length; i++) {
-    if (cart[i].hasOwnProperty(itemName)) {
-      return newcart.splice(i, 1);
+function removeFromCart(item) {
+  var itemInCart = false;
+  for(var i = 0; i < cart.length; i++){
+    if (cart[i].hasOwnProperty(item)) {
+      itemInCart = true;
+      cart.splice(i, 1);
     }
   }
-
-  return console.log("That item is not in your cart.");
+  if (!itemInCart) {
+    console.log("That item is not in your cart.");
+  }
+  return cart
 }
+
