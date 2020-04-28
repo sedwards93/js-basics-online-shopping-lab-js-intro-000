@@ -22,10 +22,9 @@ function total() {
 }
 
 function removeFromCart(itemName) {
-  var newcart = cart;
   for (let i = 0; i < cart.length; i++) {
     if (cart[i].hasOwnProperty(itemName)) {
-      return newcart.splice(i, 1);
+      return cart.splice(i, 1);
     }
   }
 
