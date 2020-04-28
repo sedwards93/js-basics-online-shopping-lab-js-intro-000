@@ -40,9 +40,10 @@ function total() {
 }
 
 function removeFromCart(itemName) {
+  var newcart = cart;
   for (let i = 0; i < cart.length; i++) {
     if (cart[i].hasOwnProperty(itemName)) {
-      return cart.splice(i, 1);
+      return newcart.splice(i, 1);
     }
   }
 
