@@ -39,9 +39,9 @@ function total() {
   return count
 }
 
-function removeFromCart(item) {
-  for (var i = 0; i < cart.length; i++) {
-    if (cart[i].hasOwnProperty(item)) {
+function removeFromCart(itemName) {
+  for (let i = 0; i < cart.length; i++) {
+    if (cart[i].hasOwnProperty(itemName)) {
       cart.splice(i, 1);
       return cart;
   }
